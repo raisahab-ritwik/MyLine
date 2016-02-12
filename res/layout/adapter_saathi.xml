@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlSaathiView"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFF"
+            android:text="Sathi call 1"
+            android:textColor="#FFF" >
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#C2C2C2" />
+
+            <com.seva60plus.hum.unused.RoundedImageView
+                android:id="@+id/riv_saathi1_picture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/new_sathi_call_img" />
+
+            <RelativeLayout
+                android:id="@+id/rlSaathi"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/riv_saathi1_picture"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/riv_saathi1_picture" >
+
+                <ImageView
+                    android:id="@+id/user_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="19dp"
+                    android:background="@drawable/blue_user" />
+
+                <ImageView
+                    android:id="@+id/call_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/user_icon"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/blue_call" />
+
+                <ImageView
+                    android:id="@+id/sms_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="14dp"
+                    android:layout_below="@+id/call_icon"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/blue_sms" />
+
+                <TextView
+                    android:id="@+id/tvSaathiName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/user_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/user_icon"
+                    android:text="text"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvSaathiPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/call_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/call_icon"
+                    android:text="text"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvSaathiEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSaathiPhone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/sms_icon"
+                    android:text="text"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/ibDeleteSaathi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/btn_cancel" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#023B60"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rlSendSms"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#023B60"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/sathi_sms1img"
+                    android:layout_width="21dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/sms_icon" />
+
+                <TextView
+                    android:id="@+id/sathi_sms1txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/sathi_sms1img"
+                    android:text="SEND SMS"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#02AE1A"
+                android:gravity="center_horizontal"
+                android:text="CALL"
+                android:textColor="#FFF" >
+
+                <ImageView
+                    android:id="@+id/sathi_call1img"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/call_icon" />
+
+                <TextView
+                    android:id="@+id/sathi_call1txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/sathi_call1img"
+                    android:text="CALL"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

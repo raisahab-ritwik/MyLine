@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#fff" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Sensitivity"
+        android:textSize="30sp" 
+        android:textColor="#000"
+        android:layout_below="@+id/headerLay"/>
+    
+       <SeekBar  
+        android:id="@+id/seekBar1"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+      
+        android:layout_centerHorizontal="true" 
+        android:max="3000"
+				     
+				       android:secondaryProgress="0" 
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/text1"
+         android:progressDrawable="@drawable/seekbar_progress"
+				       android:thumb="@drawable/seek_thumb"
+               style="@style/seekbar_style" />
+
+     
+
+</RelativeLayout>

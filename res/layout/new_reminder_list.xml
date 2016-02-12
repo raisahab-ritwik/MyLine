@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_icon"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="REMINDER"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#023B60"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+         android:id="@+id/body_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/subheaderLay"
+            android:layout_above="@+id/addLay"
+            android:background="#EFEFF4"
+        	android:orientation="vertical"
+        >
+    
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp"
+        android:dividerHeight="10dp"
+        android:divider="#EFEFF4"
+        android:scrollbars="none"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+         />
+
+    
+    <RelativeLayout 
+        android:id="@+id/empty_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <Button
+        android:id="@+id/android:empty2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+         android:layout_centerInParent="true"
+        android:text="NO\nREMINDER\nYET"
+        android:textSize="25sp"
+        android:padding="20dp"
+        android:textColor="#014E78"
+        android:background="@drawable/no_circle"
+        />
+        
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/no_reminders" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+         >
+<Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#404041"
+        android:text="ADD REMINDER"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF" />
+        
+    </LinearLayout>
+</RelativeLayout>

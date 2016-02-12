@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+
+    <ScrollView
+        android:id="@+id/allRegisterFormScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/laySavebutton"
+        android:layout_below="@+id/headerLay"
+        android:layout_marginTop="5dp" >
+    
+    <LinearLayout 
+        android:id="@+id/allRegisterForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+         <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/custEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:hint="@string/cust_name" />
+    </LinearLayout>
+    
+         <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/phoneCustEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:inputType="phone"
+            android:hint="@string/cust_phone" />
+    </LinearLayout>
+    
+         <LinearLayout
+        android:id="@+id/lay3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay2"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/medEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:hint="@string/medicine" />
+    </LinearLayout>
+    
+         <LinearLayout
+        android:id="@+id/lay4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/quntEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:hint="@string/qunt" />
+    </LinearLayout>
+           
+           </LinearLayout>
+    </ScrollView>
+         <LinearLayout
+        android:id="@+id/laySavebutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+ <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+		android:layout_weight="1"
+		android:textSize="25sp"
+		android:textColor="#fff"
+        android:background="#FF0000"
+        android:text="@string/order"
+        
+         />
+
+       
+    </LinearLayout>
+         
+</RelativeLayout>

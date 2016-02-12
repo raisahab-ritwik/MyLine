@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text">#333333</color>
+    <color name="seek_info_low">#FF006F05</color>
+    <color name="seek_info_high">#FFAD2000</color>
+    <color name="light_blue">#22A7F0</color>
+    <color name="deep_blue">#0477C0</color>
+    <color name="deep_blue2">#9F9F9F</color>
+    
+    <color name="scrollbarcolor">#2F9DD0</color>
+    <color name="blackshade">#34373A</color>
+
+</resources>

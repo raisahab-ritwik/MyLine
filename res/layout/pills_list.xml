@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#22A7F0"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/tv_fin_advisory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="PILL REMINDER"
+            android:textColor="#023B60"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <RelativeLayout
+            android:id="@+id/add_pill_reminder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:layout_alignParentRight="true"
+            android:background="#023B60"
+            >
+            
+            <ImageView 
+                android:id="@+id/add_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/weather_add"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"/>
+            
+            <TextView
+            android:id="@+id/add_pill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/add_icon"
+            android:layout_marginLeft="2dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:text="ADD PILL"
+            android:textSize="12sp"
+            android:textColor="#FFF"
+            />
+            
+            
+            </RelativeLayout>
+        
+        
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mLlayoutBottomButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_centerHorizontal="true"
+       	android:layout_above="@+id/footerLay"
+        
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/addPill"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#404041"
+            android:text="ADD PILL"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_image1"
+            android:text="Settings"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_above="@+id/footerLay"
+        android:layout_weight="0.44"
+        android:scrollbars="none"
+        android:background="#EFEFF4"
+        android:dividerHeight="10dp"
+        android:divider="#EFEFF4"
+        android:fadingEdge="none" />
+
+    <RelativeLayout 
+        android:id="@+id/empty_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_above="@+id/mLlayoutBottomButtons"
+       
+        >
+        <Button
+        android:id="@+id/android:empty"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+         android:layout_centerInParent="true"
+        android:text="NO\nREMINDER\nYET"
+        android:textSize="25sp"
+        android:padding="20dp"
+        android:textColor="#014E78"
+        android:background="@drawable/no_circle"
+        />
+        
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+
+</RelativeLayout>

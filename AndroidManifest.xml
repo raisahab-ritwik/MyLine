@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seva60plus.hum"
+    android:versionCode="37"
+    android:versionName="5.5" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <!--
+    <permission
+        android:name="com.seva60plus.seva60plus.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.seva60plus.seva60plus.permission.C2D_MESSAGE" />
+    -->
+    <!-- This app has permission to register and receive data message. -->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- client -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- Authenticator -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Sync Adapter -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application
+        android:name="com.seva60plus.hum.activity.Seva60PlusHUMApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:manageSpaceActivity=".activity.SplashActivity"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.unused.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".unused.DemoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".utilities.HeartRateMonitor"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.sathi.SaathiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.TakeaTour"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.AboutSeva60"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.Privacy"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.Terms"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.unused.MedicalSeva"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- activity for pill reminder -->
+        <activity
+            android:name="com.seva60plus.hum.pillreminder.TakeThePill"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".pillreminder.PillEdit"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.unused.Notifications"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".unused.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.activity.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".pillreminder.PillViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.activity.PreferencesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.unused.OrderMed"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".utilities.HeartRateInstraction"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".unused.Emergency"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.sharelocation.ShareLocationInstraction"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.sharelocation.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.knowledgebase.ShakeMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.sharelocation.SmsLocation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".sharelocation.MapShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.utilities.Utilities"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.knowledgebase.KnowledgeBaseVideo"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.mediacentre.MediaCentreDashBoard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreInternet"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.mediacentre.MediaCentreDoctorSpeaks"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <receiver
+            android:name="com.seva60plus.hum.pillreminder.RepeatingAlarm"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDZWY4AIThi87ZcjfP6cOWMygQ4dtXLeuQ" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.seva60plus.hum.ShakeForMute"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".unused.About"
+            android:icon="@drawable/icon"
+            android:label="@string/menu_about_label"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.HowTo"
+            android:icon="@drawable/icon"
+            android:label="@string/menu_howto_label"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".unused.ChooseType"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".nearby.MainActivityMap"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".nearby.NearByDashboard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".unused.AdBanner"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.knowledgebase.VideoPlayer"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.MenuLay"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.custom.NoInternetPage"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.custom.NoInternetPageAddSaathi"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.custom.SlowInternetPage"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".custom.SlowConnectionPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".util.CheckUpdates"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.specialoffers.OffersListActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".specialoffers.OffersListMedicalActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".specialoffers.OfferFuneralActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.specialoffers.OffersListElderCareActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.specialoffers.OffersListFinancialActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".specialoffers.OfferElderActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.specialoffers.OfferMedicalActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.knowledgebase.KnowledgeBaseActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- Well-being Activity -->
+        <activity
+            android:name="com.seva60plus.hum.wellbeing.WellBeingActivitySleep"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.wellbeing.WellBeingActivityExercise"
+            android:label="@string/app_name"
+            android:parentActivityName="com.seva60plus.hum.SplashActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellBeingActivityMood"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Well-being Statistics -->
+        <activity
+            android:name="com.seva60plus.hum.wellbeing.WellBeingStatisticsMood"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellBeingStatisticsSleep"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellBeingStatisticsExercise"
+            android:label="@string/app_name"
+            android:parentActivityName="com.seva60plus.hum.SplashActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- NearBy Activity -->
+        <activity
+            android:name=".nearby.NearByMapListInfo"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".nearby.NearByMapListDist"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Reminder -->
+        <activity
+            android:name="com.seva60plus.hum.reminder.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+
+            <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.reminder.NewReminder"
+            android:label="@string/title_activity_new_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.reminder.EditReminder"
+            android:label="@string/title_activity_edit_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Weather -->
+        <activity
+            android:name=".utilities.weather.WeatherFirstActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".utilities.weather.WeatherLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+
+        <!-- New Weather 31.08.15 -->
+
+        <activity
+            android:name="com.seva60plus.hum.utilities.weather.WeatherNewChangeLocation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.utilities.weather.WeatherNewForcastList"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.utilities.weather.WeatherNewMain"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Heart Rate -->
+
+        <activity
+            android:name="com.wrc.heartratemonitor.HeartRateMonitorMainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Country Code -->
+        <activity
+            android:name=".activity.CountrycodeActivity"
+            android:label="Select your country"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.activity.CountryCodeActivity"
+            android:label="Select your country"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+
+        <!-- Contact -->
+
+        <activity
+            android:name="com.seva60plus.hum.utilities.phonecontact.ContactListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.phonecontactfetch.ContactListActivityfetch"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!--
+             phone receiver change due to crash 		<receiver android:name="com.seva60plus.seva60plus.ServiceReceiver">
+					<intent-filter>
+					  <action android:name="android.intent.action.PHONE_STATE" />
+					</intent-filter>
+				</receiver>
+        -->
+
+
+        <!-- For GCM Receiver -->
+
+
+        <!--
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.seva60plus.seva60plus" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!-- PostData Services -->
+        <receiver android:name="com.seva60plus.hum.network.PostDataStatices" >
+            <intent-filter>
+                <action android:name="com.seva60Plus.alarm.ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.seva60plus.hum.unused.AlarmService"
+            android:enabled="true" />
+
+        <receiver android:name=".unused.AlarmReceiver" />
+
+        <!-- New Reminder -->
+
+        <activity
+            android:name=".reminder.taskreminder.ReminderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".reminder.taskreminder.ReminderEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".reminder.taskreminder.TaskPreferences"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".reminder.taskreminder.ReminderAlert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name=".reminder.taskreminder.OnBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".reminder.taskreminder.OnAlarmReceiver" />
+
+        <service android:name=".reminder.taskreminder.ReminderService" />
+        <service android:name="com.seva60plus.hum.pillreminder.PillReminderService" />
+
+        <!-- Alert -->
+
+        <activity
+            android:name=".pillreminder.PillReminderAlert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellbeingExReminderAlert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellbeingMoodReminderAlert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".mediacentre.YouTubeMainActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wellbeing.WellbeingWaReminderAlert"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Pie Chart -->
+        <activity
+            android:name="org.achartengine.GraphicalActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.seva60plus.hum.wellbeing.PieChartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaHumTraning"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Help Screen -->
+
+        <activity
+            android:name="com.seva60plus.hum.activity.HelpRegistrationPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.pillreminder.HelpPillReminderPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.nearby.HelpNearbyPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seva60plus.hum.nearby.HelpNearbyMapPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".mediacentre.PlayVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackNoTitleBarTheme" >
+            <meta-data
+                android:name="@string/minVersion"
+                android:value="8" />
+            <meta-data
+                android:name="@string/isLaunchableActivity"
+                android:value="true" />
+        </activity>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <!-- <service android:name="com.seva60plus.hum.GCMIntentService" /> -->
+        <service android:name=".reminder.service.ScheduleService" />
+        <service android:name=".alarmnotification.NotificationAlarmService" />
+        <service android:name=".reminder.service.MailService" />
+        <service
+            android:name="com.seva60plus.hum.alarmnotification.NotificationAlarmService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.seva60plus.hum.alarmnotification.StartService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".mediacentre.MediaCentreFinAdvisory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreFitness"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreArtNCulture"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreDocSpeaks"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreFood"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreTechnology"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediacentre.MediaCentreTravel"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediacentre.MediaCentreHumTraining"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sathi.SaathiActivityView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HumDetailsView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sathi.AddSaathiAcivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".wellbeing.sync.AuthenticatorService"
+            android:exported="true"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <!-- Content Provider. -->
+        <provider
+            android:name=".wellbeing.sync.MyContentProvider"
+            android:authorities="com.seva60plus.provider"
+            android:exported="false"
+            android:label="Content Provider" />
+        <!-- Sync adapter related service -->
+        <service
+            android:name=".wellbeing.sync.WellBeingService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <!-- Kitchen -->
+        <activity
+            android:name=".kitchen.KitchenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- Care -->
+        <activity
+            android:name=".care.CareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- Service -->
+        <service android:name=".util.SpeedTestService" />
+    </application>
+
+</manifest>

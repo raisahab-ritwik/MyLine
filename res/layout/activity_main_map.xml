@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    
+    tools:context="com.wrc.seva60hum.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="LIST VIEW"
+            android:background="#404041"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="MAP VIEW"
+            android:textSize="20sp"
+            android:textColor="#404041"
+            android:background="#FFF" />
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/subheaderLay1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/subheaderLay"
+        android:background="#FFF"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/type_select"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="atm"
+            android:layout_marginRight="20dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_bg"
+            android:textColor="#0477C0" />
+
+        <Spinner
+            android:id="@+id/area_select"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="1 K.M"
+            android:layout_marginLeft="20dp"
+            android:spinnerMode="dropdown"
+            android:textColor="#0477C0"
+            android:background="@drawable/spinner_bg" />
+    </LinearLayout>
+
+    <RelativeLayout 
+        android:id="@+id/map_lay"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_above="@+id/sv_items"
+        android:layout_below="@+id/subheaderLay1">
+    
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+         />
+    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       
+        android:layout_below="@+id/subheaderLay1"
+        android:layout_above="@+id/footerLay"
+        android:layout_marginTop="10dp"
+         >
+
+        <ListView
+            android:id="@+id/map_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#EFEFF4"
+            android:scrollbars="none"
+            
+            android:dividerHeight="10dp" >
+        </ListView>
+
+    </RelativeLayout>
+
+      <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>
+    
+</RelativeLayout>

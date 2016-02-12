@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4" >
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+            android:visibility="visible"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/tv_fin_advisory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="PILL REMINDER"
+            android:textColor="#023B60"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/scroll_lay"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/footerLay"
+    android:layout_below="@+id/subheaderLay"
+        
+        >
+    
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <!--
+            Capa que recibe el foco para 
+            que no se lo quede el primer edit text
+            -->
+
+            <requestFocus />
+        </LinearLayout>
+
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Seva60"
+            android:inputType="textPersonName"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pill"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/pill"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:hint="Pill Name"
+            
+            android:textColorHint="#6D6E76"
+            android:textColor="#6D6E76"
+            android:background="@drawable/apptheme_textfield_activated_holo_light"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/days"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_days"
+            android:textColor="#FFF"
+            android:layout_margin="5dp"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/add_days"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#023B60"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:text="@string/add_days" />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            
+            <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/sunday_selector"
+        android:textColor="#6D6E76"
+        
+        android:text="" />
+            
+            <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/monday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/tuesday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            
+            <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/wednesday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/tuesday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/friday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:button="@drawable/sunday_selector"
+        android:textColor="#6D6E76"
+        android:layout_marginLeft="5dp"
+        android:text="" />
+            
+            
+        </LinearLayout>
+      		
+        <RelativeLayout 
+            android:id="@+id/listView_lay"
+            android:layout_width="fill_parent"
+  			android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+  			android:layout_marginTop="10dp"
+            >
+        
+             <ListView 
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+  			android:layout_height="wrap_content"
+  			android:dividerHeight="3dp"
+  			android:divider="#0477C0"
+  			android:fadingEdge="none"
+  			android:visibility="gone"
+  			android:scrollbars="horizontal"
+  			 />
+         </RelativeLayout> 
+            
+        <TextView
+            android:id="@+id/textHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:layout_below="@+id/listView1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        
+        
+        <LinearLayout 
+		    android:id="@+id/add_time"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+		    android:orientation="horizontal"
+		    android:background="#FFF"
+		    >
+		    <ImageView 
+		        android:id="@+id/reminder_time_img"
+			android:layout_height="22dp"
+			android:layout_width="22dp"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="center_vertical"
+		     android:background="@drawable/remider_clock"   
+		        />
+		    <Button 
+			android:id="@+id/reminder_time"
+			android:layout_height="50dp"
+			android:layout_width="fill_parent"
+			android:text="Add time"
+			android:textSize="18sp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			/>
+		    
+		    <RelativeLayout 
+			android:id="@+id/reminder_time_add"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:textSize="18sp"
+			android:background="#404041"
+			>
+
+		        <ImageView
+		            android:id="@+id/riv_saathi2_picture"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/add_pill" />
+		        
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+		
+        <LinearLayout 
+		    android:id="@+id/delete_time"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+		    android:orientation="horizontal"
+		    android:background="#FFF"
+		    >
+		    <ImageView 
+		        android:id="@+id/reminder_time_img1"
+			android:layout_height="22dp"
+			android:layout_width="22dp"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="center_vertical"
+		     android:background="@drawable/remider_clock"   
+		        />
+		    <Button 
+			android:id="@+id/reminder_time1"
+			android:layout_height="50dp"
+			android:layout_width="fill_parent"
+			android:text="Delete time"
+			android:textSize="18sp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			/>
+		    
+		    <RelativeLayout 
+			android:id="@+id/reminder_time_add1"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:textSize="18sp"
+			android:background="#404041"
+			>
+
+		        <ImageView
+		            android:id="@+id/imageView2copy"
+		            android:layout_width="17dp"
+		            android:layout_height="18dp"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/minus" />
+		        
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/addDeleteBtnLay"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+        
+        <Button
+            android:id="@+id/add_time1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:background="@drawable/button_border_darkblue_round"
+            android:textColor="#FFF"
+            android:text="@string/add_time" />
+
+        <Button
+            android:id="@+id/delete_time1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="#FFF"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/button_border_darkblue_round"
+            android:text="@string/delete_time" />
+        
+        </LinearLayout>
+
+       
+    </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>
+
+     <Button
+            android:id="@+id/confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="@string/confirm"
+            android:textColor="#fff"
+            android:layout_above="@+id/footerLay"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:background="#404041"
+           />
+    
+  <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>
+
+</RelativeLayout>

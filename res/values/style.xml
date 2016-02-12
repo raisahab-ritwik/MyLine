@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="main_content">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="dashboard_button" parent="@style/main_content">
+      <item name="android:layout_marginTop">0dip</item>
+      <item name="android:layout_marginBottom">0dip</item>
+      <item name="android:background">@drawable/button_image</item>
+    </style>
+    <style name="border_of_content">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">2dip</item>
+        <item name="android:background">@drawable/border_background</item>
+    </style>
+    <style name="top_logo">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">45dip</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">5dip</item>
+        <item name="android:background">@drawable/main_background</item>
+    </style>
+    <style name="seekbar_box_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#fff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:paddingBottom">0dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="seekbar_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="seekbar_info_box_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#FFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">0dip</item>
+        <item name="android:paddingBottom">6dip</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="seekbar_info_style">
+      <item name="android:layout_width">fill_parent</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:textColor">@color/text</item>
+      <item name="android:layout_weight">1</item>
+    </style>
+    <style name="checkbox_box_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/main_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:paddingBottom">3dip</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="checkbox_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="BlackNoTitleBarTheme" parent="android:Theme.Black.NoTitleBar"/>
+
+      <style name="ProgressHUD" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+</resources>

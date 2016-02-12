@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="7dp"
+     >
+
+     <LinearLayout
+        android:id="@+id/imageLayS"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+         >
+
+        <ImageView
+            android:id="@+id/locImageS"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+           
+            
+             />
+    </LinearLayout>
+    
+     <TextView
+        android:id="@+id/locNameS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/imageLayS"
+        android:text="Dibyendu Samanta"
+        android:textSize="18sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#0477C0"
+         />
+     <TextView
+        android:id="@+id/locAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:layout_below="@+id/locNameS"
+        android:layout_toRightOf="@+id/imageLayS"
+        android:text="Address"
+        android:textSize="16sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#8A8A8A"
+         />
+     <TextView
+        android:id="@+id/distAdd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:layout_below="@+id/locAdd"
+        android:layout_toRightOf="@+id/imageLayS"
+        android:text="0.0Km"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000"
+         />
+     
+      
+     <LinearLayout
+               android:id="@+id/footer_btns"
+         android:layout_width="fill_parent"
+         android:layout_height="40dp"
+         android:layout_below="@+id/distAdd1"
+         android:layout_marginTop="10dp"
+         android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/dist_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#404041"
+                 >
+                <ImageView
+                    android:id="@+id/dist_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/map_new_distance" />
+                
+                <TextView 
+                    android:id="@+id/dist_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/dist_img"
+                android:textColor="#FFF"/>
+                
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/more_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CALL"
+                android:background="#22A7F0"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF" >
+                
+                <ImageView
+                    android:id="@+id/more_img"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/map_more" />
+                
+                <TextView 
+                    android:id="@+id/more_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/more_img"
+                android:textColor="#FFF"/>
+                
+                
+                </RelativeLayout>
+
+            </LinearLayout>
+   <!-- 
+     <LinearLayout
+         android:id="@+id/footer_btns"
+         android:layout_width="fill_parent"
+         android:layout_height="40dp"
+         android:layout_below="@+id/distAdd1"
+         android:layout_marginTop="7dp"
+         android:orientation="horizontal" >
+
+         <Button
+             android:id="@+id/distAdd"
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:background="#404041"
+             android:text="Distance"
+             android:textColor="#FFF" />
+         
+         <Button
+             android:id="@+id/button2"
+             android:layout_width="0dp"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:background="#585858"
+             android:textColor="#FFF"
+             android:text="More" />
+         
+     </LinearLayout>
+ -->  
+
+</RelativeLayout>

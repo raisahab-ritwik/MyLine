@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#fff" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/mLlayoutBottomButtons"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_below="@+id/headerLay"
+    android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/setUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            
+            
+            android:background="@drawable/initial_setup"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/satheCallBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            
+            android:background="@drawable/saathi_call"
+            android:textColor="#FFF"
+            android:layout_marginTop="3dp" />
+        <Button
+            android:id="@+id/medicalSevaBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            
+            android:background="@drawable/medical"
+            android:textColor="#FFF"
+            android:layout_marginTop="3dp" />
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            
+            android:background="@drawable/share_location"
+            android:textColor="#FFF"
+            android:layout_marginTop="3dp" />
+        <Button
+            android:id="@+id/emergencyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            
+            android:background="@drawable/emergency"
+            android:textColor="#FFF"
+            android:layout_marginTop="3dp" />
+        
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

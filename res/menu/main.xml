@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sabd="schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/editCity"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="выбрать город">
+    </item>
+    <item
+        android:id="@+id/refresh"
+ 
+        android:showAsAction="always"
+        
+        android:icon="@drawable/ic_menu_refresh"
+        android:title="обновить данные">
+    </item>
+
+</menu>

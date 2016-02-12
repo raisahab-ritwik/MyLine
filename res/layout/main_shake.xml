@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+    
+    <ImageView android:src="@drawable/logo" 
+                style="@style/top_logo"
+                android:visibility="gone" />
+    
+    <View style="@style/border_of_content" />
+    
+    <ImageButton android:id="@+id/on_off_button"
+       android:src="@drawable/dashboard_button_on_off"
+       style="@style/dashboard_button" />
+    
+    <View style="@style/border_of_content" />
+     
+    <ImageButton android:id="@+id/calibrate_button"
+       android:src="@drawable/dashboard_button_on_off"
+       style="@style/dashboard_button" 
+       android:visibility="invisible"/>
+     
+    <View style="@style/border_of_content" /> 
+    
+    <LinearLayout 
+    android:orientation="vertical"
+    
+    style="@style/seekbar_box_style">
+      <SeekBar android:id="@+id/seekbar_calibration"
+               android:max="3000"
+				       android:progress="0"
+				       android:secondaryProgress="0"
+				       android:progressDrawable="@drawable/seekbar_progress"
+				       android:thumb="@drawable/seek_thumb"
+               style="@style/seekbar_style" />
+      <TableLayout
+		    android:stretchColumns="1"
+		    style="@style/seekbar_info_box_style">
+		    <TableRow>
+	        <TextView android:text="@string/seekbar_low"
+						style="@style/seekbar_info_style"
+						android:textColor="@color/seek_info_low" />
+          <TextView android:text="@string/seekbar_strength"
+          style="@style/seekbar_info_style"
+          android:gravity="center" />
+          <TextView android:text="@string/seekbar_high"
+          style="@style/seekbar_info_style"
+          android:gravity="right"
+          android:textColor="@color/seek_info_high" />
+        </TableRow>
+      </TableLayout>
+    </LinearLayout>
+    
+    <View style="@style/border_of_content" /> 
+    
+    <LinearLayout 
+    style="@style/checkbox_box_style"
+    android:visibility="invisible"
+    >
+	    <CheckBox android:id="@+id/vibrate_checkbox"
+	        style="@style/checkbox_style"
+	        android:text="@string/checkbox_vibrate_label" 
+	        />
+    </LinearLayout>
+        
+    <View style="@style/border_of_content" />
+
+</LinearLayout>

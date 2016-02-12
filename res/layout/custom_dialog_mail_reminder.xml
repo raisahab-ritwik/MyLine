@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/border_background"
+android:orientation="vertical"
+android:paddingTop="1dp" >
+
+     
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="#0477C0"
+         android:orientation="vertical"
+         android:padding="10dp" >
+
+         <EditText
+             android:id="@+id/editMailId"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:ems="10"
+             
+             android:hint="Give new mail id here" >
+
+             <requestFocus />
+         </EditText>
+
+         <Spinner
+             android:id="@+id/exisMailIds"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/editMailId"
+             android:layout_marginTop="16dp"
+             android:prompt="@string/str_mail"
+              android:entries="@array/str_arr_mail"
+             />
+
+     </RelativeLayout>
+
+</LinearLayout>
+

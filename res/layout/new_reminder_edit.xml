@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_icon"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="REMINDER"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#023B60"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/bodyLay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_above="@+id/addLay"
+        android:background="#EFEFF4"
+        >
+       
+	<LinearLayout	
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:visibility="gone"
+			android:text="@string/title" />
+		<EditText android:id="@+id/title" 
+		  android:layout_width="fill_parent"
+			android:layout_height="50dp" 
+			android:background="@drawable/apptheme_textfield_activated_holo_light"
+			android:hint="Enter description about reminder"
+			android:textColor="#000"
+			android:textColorHint="#000"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginTop="50dp"
+			android:singleLine="true"
+			android:gravity="center_vertical|center"
+			android:textSize="18sp"
+			/>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:visibility="gone"
+			android:text="@string/body" />
+		<EditText android:id="@+id/body" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:minLines="5"
+			android:scrollbars="vertical"
+			android:visibility="gone" 
+			android:gravity="top" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone" 
+			android:text="@string/date" />
+		<View 
+		    android:id="@+id/view1"
+		    android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			
+			android:layout_marginTop="10dp"
+			android:background="#C2C2C2"
+		    />
+		
+		<LinearLayout 
+		    android:id="@+id/reminder_date_lay"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="0dp"
+		    android:orientation="horizontal"
+		    android:background="#FFF"
+		    >
+		    <ImageView 
+		        android:id="@+id/reminder_img"
+			android:layout_height="22dp"
+			android:layout_width="22dp"
+			android:layout_marginLeft="10dp"
+		     android:background="@drawable/reminder_calender"   
+		     android:layout_gravity="center_vertical"
+		        />
+		    <Button 
+			android:id="@+id/reminder_date"
+			android:layout_height="50dp"
+			android:layout_width="fill_parent"
+			android:text="Enter date"
+			android:textSize="18sp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			/>
+		    
+		    <RelativeLayout 
+			android:id="@+id/reminder_date_add"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:textSize="18sp"
+			android:background="#404041"
+			>
+
+		        <ImageView
+		            android:id="@+id/menu_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/add_pill" />
+		        
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+		<View 
+		    android:id="@+id/view2"
+		    android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			
+			android:layout_marginTop="0dp"
+			android:background="#C2C2C2"
+		    />
+		
+		<View 
+		    android:id="@+id/view3"
+		    android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			
+			android:layout_marginTop="10dp"
+			android:background="#C2C2C2"
+		    />
+		
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:visibility="gone"
+			android:text="@string/time" />
+		
+		<LinearLayout 
+		    android:id="@+id/reminder_time_lay"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="0dp"
+		    android:orientation="horizontal"
+		    android:background="#FFF"
+		    >
+		    <ImageView 
+		        android:id="@+id/reminder_time_img"
+			android:layout_height="22dp"
+			android:layout_width="22dp"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="center_vertical"
+		     android:background="@drawable/remider_clock"   
+		        />
+		    <Button 
+			android:id="@+id/reminder_time"
+			android:layout_height="50dp"
+			android:layout_width="fill_parent"
+			android:text="Enter time"
+			android:textSize="18sp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			/>
+		    
+		    <RelativeLayout 
+			android:id="@+id/reminder_time_add"
+			android:layout_height="50dp"
+			android:layout_width="50dp"
+			android:textSize="18sp"
+			android:background="#404041"
+			>
+
+		        <ImageView
+		            android:id="@+id/riv_saathi2_picture"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/add_pill" />
+		        
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+		
+		<View 
+		    android:id="@+id/view4"
+		    android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			
+			android:layout_marginTop="0dp"
+			android:background="#C2C2C2"
+		    />
+		
+		<Button android:id="@+id/confirm1" 
+		  android:text="@string/confirm"
+		  android:visibility="gone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/addLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+         >
+<Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#404041"
+        android:text="ADD REMINDER"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF" />
+        
+    </LinearLayout>
+</RelativeLayout>
+
+<!-- dibyendu
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout	
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="@string/title" />
+		<EditText android:id="@+id/title" 
+		  android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			/>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="@string/body" />
+		<EditText android:id="@+id/body" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:minLines="5"
+			android:scrollbars="vertical" 
+			android:gravity="top" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="@string/date" />
+		<Button 
+			android:id="@+id/reminder_date"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			/>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="@string/time" />
+		<Button 
+			android:id="@+id/reminder_time"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			/>
+		<Button android:id="@+id/confirm" 
+		  android:text="@string/confirm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+</ScrollView>
+ -->

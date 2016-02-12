@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="7dp"
+     >
+
+     
+     <TextView
+        android:id="@+id/day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:text="Monday"
+        android:textSize="18sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#0477C0"
+         />
+     
+     <LinearLayout 
+         android:id="@+id/temp_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:orientation="horizontal"
+         android:layout_below="@+id/day_text"
+         >
+         <TextView
+        android:id="@+id/temp_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="5dip"
+         android:text="min"
+         />
+         <TextView
+        android:id="@+id/temp_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="mmax"
+         />
+         
+     </LinearLayout>
+     
+      <LinearLayout 
+         android:id="@+id/temp_lay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:orientation="horizontal"
+         android:layout_below="@+id/temp_lay"
+         >
+         <TextView
+        android:id="@+id/temp_morn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="5dip"
+         android:text="morn"
+         />
+         <TextView
+        android:id="@+id/temp_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="day"
+         />
+         
+         <TextView
+        android:id="@+id/temp_even"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="even"
+         />
+         
+         <TextView
+        android:id="@+id/temp_night"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="night"
+         />
+         
+     </LinearLayout>
+     
+      <LinearLayout 
+         android:id="@+id/temp_lay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:orientation="horizontal"
+         android:layout_below="@+id/temp_lay2"
+         >
+         <TextView
+        android:id="@+id/temp_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="5dip"
+         android:text="pressure"
+         />
+         <TextView
+        android:id="@+id/temp_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="humidity"
+         />
+         
+         <TextView
+        android:id="@+id/temp_cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="cloud"
+         />
+         
+         <TextView
+        android:id="@+id/temp_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="speed"
+         />
+         
+         <TextView
+        android:id="@+id/temp_rain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="rain"
+         />
+         
+         <TextView
+        android:id="@+id/temp_deg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="deg"
+         />
+         
+     </LinearLayout>
+     
+     
+   <LinearLayout 
+         android:id="@+id/temp_lay4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:orientation="horizontal"
+         android:layout_below="@+id/temp_lay3"
+         >
+         <TextView
+        android:id="@+id/temp_wname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="5dip"
+         android:text="wname"
+         />
+         <TextView
+        android:id="@+id/temp_wdes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+         android:text="wdes"
+         />
+         
+     </LinearLayout>
+
+   <View 
+   	android:id="@+id/view1"    
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#C2C2C2"   
+       />
+   
+</RelativeLayout>

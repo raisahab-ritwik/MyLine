@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/masterContainerView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/parentScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/laySavebutton"
+        android:layout_below="@+id/headerLay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lay1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/nameImage1"
+                    android:layout_width="15dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/name"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/etHumName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:maxLength="31"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/nameImage"
+                    android:layout_width="15dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/name"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay1copy"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/userPhoneImage1"
+                    android:layout_width="15dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/contact_setup"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvHumCountryCode"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFF"
+                    android:editable="false"
+                    android:hint="+91"
+                    android:inputType="phone"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/userPhoneCode_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/down_arrow_gray" />
+
+                <EditText
+                    android:id="@+id/etHumPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:hint="@string/phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/userPhoneImage"
+                    android:layout_width="15dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/contact_setup"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDateOfBirth"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/dobImage1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/birthday"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvDateOfBirth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:editable="false"
+                    android:hint="@string/dob"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/dobImage"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/birthday"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay2copy"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lay2"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/rgGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="true"
+                        android:paddingBottom="5dp"
+                        android:text="    Male"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/checkbox_selector"
+                        android:paddingBottom="5dp"
+                        android:text="    Female"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlGeoLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <CheckBox
+                    android:id="@+id/cbGeoLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:button="@drawable/checkbox_selector1"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/check_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/cbGeoLocation"
+                    android:text="I allow my Saathis to see my location"
+                    android:textColor="#313131"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/addsathiLay"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_border_green_round" >
+
+                <TextView
+                    android:id="@+id/addsathi1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/add_saathi_header"
+                    android:textColor="#FFF"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/addsathi1arrow"
+                    android:layout_width="16dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/add_sathi_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sathi1_body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/lay10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lay9"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/saathiuser"
+                        android:layout_width="15dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/contact_setup"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvSaathiCountryCode"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@android:color/transparent"
+                        android:editable="false"
+                        android:hint="+91"
+                        android:inputType="phone"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/contactNumCode_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/down_arrow_gray" />
+
+                    <EditText
+                        android:id="@+id/etSaathiPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/contact"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lay10"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/saathiname"
+                        android:layout_width="15dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/name"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/etSaathiName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_saathi_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:maxLength="31"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay11"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/relationEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/relation"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lay12"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/saathiemail"
+                        android:layout_width="18dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/blue_sms"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/etSaathiEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/mail"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:textColor="#313131"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay13"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btnCapture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/photo"
+                        android:textColor="#2F5E7C"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imVCature_pic"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:contentDescription="catured picture"
+                        android:src="@drawable/no_image" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- okk -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/laySavebutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#535254"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/laySavebutton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btCancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#404041"
+                android:text="@string/cancel_button_title"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btSave"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#0392D8"
+                android:text="@string/save"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="financial_advisory">
+        <item>wgRnC6rthws</item>
+        <item>4cb4JhEbZJk</item>
+        <item>4_Y83PznZww</item>
+        <item>qlqagqtwBtE</item>
+        <item>OLJjowoPjhs</item>
+    </string-array>
+    <string-array name="fitness">
+        <item>8BcPHWGQO44</item>
+        <item>mQLzNf8VOIc</item>
+        <item>k4ST1j9PfrA</item>
+        <item>5fDcQ0PU9BI</item>
+        <item>6m0KjKeF_hY</item>
+    </string-array>
+    <string-array name="technology">
+        <item>oIMTM168BK8</item>
+        <item>sodMDs7rEEk</item>
+        <item>RMYjsBkXOAI</item>
+    </string-array>
+    <string-array name="art_and_culture">
+        <item>https://www.ted.com/talks/jane_fonda_life_s_third_act</item>
+        <item>https://www.ted.com/talks/elizabeth_gilbert_on_genius</item>
+    </string-array>
+    <string-array name="food">
+        <item>NBaFbfdlZXU</item>
+        <item>qW-6DQ-70y8</item>
+        <item>uExpx9JPRPs</item>
+        <item>z9dM3VEMYTs</item>
+        <item>ZnOb2UvrFM8</item>
+    </string-array>
+    <string-array name="travel"></string-array>
+
+</resources>

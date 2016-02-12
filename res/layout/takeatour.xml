@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuPanel"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#c0000000"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+  <Button
+        android:id="@+id/close"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_close_image"
+        android:text="Close"
+        android:textColor="#fff" />
+
+		<ScrollView 
+		    android:id="@+id/takeatour_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/close">
+
+        <TextView
+            android:id="@+id/takeatour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            
+            android:gravity="left"
+            android:textSize="30sp"
+            android:paddingLeft="15dp"
+            
+            android:paddingRight="15dp"
+            android:text="@string/take_a_tour_msg"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+        </ScrollView>
+
+</RelativeLayout>

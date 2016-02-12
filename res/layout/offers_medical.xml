@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_icon"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="MEDICAL OFFRES"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#023B60"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content_close"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footerLay"
+        android:layout_below="@+id/subheaderLay"
+        android:background="#EFEFF4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="#EFEFF4"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/sv_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFEFF4"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/list_lay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFEFF4"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_hum_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFF" >
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="#C2C2C2" />
+
+                        <RelativeLayout
+                            android:id="@+id/image_lay"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_above="@+id/buttonLay"
+                            android:layout_below="@+id/view1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/image_border_gray_round" >
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/icon"
+                                android:scaleType="fitXY" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/desc_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/buttonLay"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/image_lay" >
+
+                            <TextView
+                                android:id="@+id/text_cname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="Medical Company"
+                                android:textColor="#023B60"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/text_offer_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_cname"
+                                android:layout_marginLeft="15dp"
+                                android:text="20% porro quisquam est"
+                                android:textColor="#397517"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_offer_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_offer_name"
+                                android:layout_marginLeft="15dp"
+                                android:text="himssfuturecare.com•HIMSS Future Care is a global"
+                                android:textColor="#BFBFBF"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buttonLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="10dp"
+                            android:background="#023B60"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/visit_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#023B60"
+                                android:gravity="center_horizontal" >
+
+                                <ImageView
+                                    android:id="@+id/sathi_sms1img"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/off_web" />
+
+                                <TextView
+                                    android:id="@+id/sathi_sms1txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toRightOf="@+id/sathi_sms1img"
+                                    android:text="WEBSITE"
+                                    android:textColor="#FFF"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/call_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#02AE1A"
+                                android:gravity="center_horizontal"
+                                android:text="CALL"
+                                android:textColor="#FFF" >
+
+                                <ImageView
+                                    android:id="@+id/sathi_call1img"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/call_icon" />
+
+                                <TextView
+                                    android:id="@+id/sathi_call1txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_toRightOf="@+id/sathi_call1img"
+                                    android:text="CALL"
+                                    android:textColor="#FFF"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_doctor_speaks"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFF"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/riv_saathi2_picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/list_eldercare" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/riv_saathi2_picture"
+                            android:text="ELDER CARE"
+                            android:textColor="#22A7F0"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_financial_advisory"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFF"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/list_entertainment" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/imageView3"
+                            android:text="ENTERTAINMENT"
+                            android:textColor="#22A7F0"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_fitness"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFF"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/list_financial" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/imageView4"
+                            android:text="FINANCIAL"
+                            android:textColor="#22A7F0"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+
+</RelativeLayout>

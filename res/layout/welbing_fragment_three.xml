@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent">
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+        
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="NOTIFICATION"
+            android:textColor="#023B60"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+    
+  <!--   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+         android:background="#FFFFFF"  
+         android:layout_below="@+id/subheaderLay">
+     
+
+        <ImageView
+            android:id="@+id/appImg"
+              android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+         
+            android:src="@drawable/bubloo" />
+
+        <ImageView
+            android:id="@+id/mailImg1"
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_toRightOf="@+id/appImg"
+            android:text="  Do it Bubloo !!! "
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/addImg1"
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/mailImg1"
+            android:src="@drawable/add" />
+
+	</RelativeLayout>
+ -->
+            <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/subheaderLay"
+            android:layout_above="@+id/footerLay"
+            android:background="#0477C0">
+
+                    <RelativeLayout 
+                    android:id="@+id/image_lay"
+            		android:layout_width="150dp"
+            		android:layout_height="250dp" 
+            		android:layout_marginTop="0dp"
+            		android:layout_alignParentTop="true"
+            		android:layout_centerHorizontal="true"
+                        >
+                        <ImageView 
+                    android:id="@+id/welbing_image"
+            		android:layout_width="match_parent"
+            		android:layout_height="match_parent"   
+                    android:src="@drawable/welbing3"  
+                            />
+                        
+                    </RelativeLayout>
+                    
+                    <RelativeLayout 
+                    android:id="@+id/text_lay"
+            		android:layout_width="match_parent"
+            		android:layout_height="wrap_content"
+            		android:gravity="center"
+            		android:layout_marginLeft="30dp"
+            		android:layout_below="@+id/image_lay"
+            		>
+                     <TextView 
+                     android:id="@+id/text_welbing"
+            		android:layout_width="match_parent"
+            		android:layout_height="wrap_content"
+            		android:text="HOW'S YOUR MODE SO FAR TODAY?"
+            		android:textColor="#FFF"
+           			android:textStyle="bold"
+           			android:textSize="20sp"
+            		android:textAppearance="?android:attr/textAppearanceMedium"
+                         />   
+                        
+                    </RelativeLayout>
+                    
+                    <LinearLayout
+    				android:id="@+id/button_lay"
+    				android:layout_width="fill_parent"
+   					android:layout_height="50dp"
+   					android:layout_alignParentBottom="true"
+    				android:layout_marginLeft="20dp"
+    				android:layout_marginRight="20dp"
+    				android:layout_marginBottom="20dp"
+    				android:layout_below="@+id/text_lay"
+   					android:orientation="horizontal" >
+
+   				 <Button
+       			 android:id="@+id/wel_btn"
+       			 android:layout_width="wrap_content"
+    		    android:layout_height="50dp"
+    		    android:layout_weight="1"
+    		    android:background="#FFF"
+   			    android:text="BAD"
+  		      	android:textColor="#000" />
+
+  				  <Button
+   			     android:id="@+id/wel_btn2"
+   			     android:layout_width="wrap_content"
+   			     android:layout_height="50dp"
+  			      android:layout_weight="1"
+  			      android:background="#FFF"
+  			      android:text="OKAY"
+  			      android:layout_marginLeft="10dp"
+  			      android:textColor="#000" />
+  				  
+  				  <Button
+       			 android:id="@+id/wel_btn3"
+       			 android:layout_width="wrap_content"
+    		    android:layout_height="50dp"
+    		    android:layout_weight="1"
+    		    android:background="#FFF"
+   			    android:text="GOOD"
+   			    android:layout_marginLeft="10dp"
+  		      	android:textColor="#000" />
+  				  
+				</LinearLayout>
+                    
+                    
+                    
+             
+           
+        </RelativeLayout>
+        
+    
+            
+    <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+     
+
+</RelativeLayout>
+
+ 

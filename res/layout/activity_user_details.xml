@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/masterContainerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/laySavebutton"
+        android:layout_below="@+id/headerLay"
+        android:layout_margin="7dp"
+        android:background="@drawable/bg_media_centre_destination"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/nameImage1"
+                android:layout_width="15dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/name"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/name"
+                android:textColor="#313131"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/nameImage"
+                android:layout_width="15dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/name"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay1copy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/userPhoneImage1"
+                android:layout_width="15dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/contact_setup"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_CountryCode"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="#FFF"
+                android:editable="false"
+                android:hint="+91"
+                android:inputType="phone"
+                android:textColor="#313131"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/userPhoneCode_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down_arrow_gray" />
+
+            <TextView
+                android:id="@+id/tv_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="#313131"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/userPhoneImage"
+                android:layout_width="15dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/contact_setup"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/a_apptheme_textfield_activated_holo_light"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/dobImage1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/birthday"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_dateOfBirth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#FFF"
+                android:editable="false"
+                android:hint="@string/dob"
+                android:textColor="#313131"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/dobImage"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/birthday"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay2copy"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lay2"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_Male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="true"
+                    android:paddingBottom="5dp"
+                    android:text="    Male"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_selector"
+                    android:paddingBottom="5dp"
+                    android:text="    Female"
+                    android:textColor="#313131"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Ok -->
+
+        <RelativeLayout
+            android:id="@+id/rl_isGeo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <CheckBox
+                android:id="@+id/cb_isGeo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/checkbox_selector1"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/check_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/cb_isGeo"
+                android:text="I allow my Saathis to see my location"
+                android:textColor="#313131"
+                android:textSize="15sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/laySavebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#535254"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/laySavebutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#404041"
+                android:onClick="onCancelButtonClick"
+                android:text="CANCEL"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#0392D8"
+                android:onClick="onSaveButtonClick"
+                android:text="@string/save"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

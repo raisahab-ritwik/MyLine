@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/menuPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        
+        android:background="#FFF"
+        android:gravity="right"
+        android:orientation="vertical" >
+        
+<Button
+        android:id="@+id/close"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_close_image"
+        android:text="Close"
+        android:textColor="#fff" />
+
+<View 
+            android:id="@+id/headerdivider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#C2C2C2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/close"/>
+
+
+		 <WebView
+             android:id="@+id/privacy_web"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/headerdivider"
+            />
+<!-- 
+		<ScrollView 
+		    android:id="@+id/privacy_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/headerdivider">
+
+		    <RelativeLayout
+		     android:id="@+id/privacy_text_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+		        >
+		    
+		    <TextView
+            android:id="@+id/privacy_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Title"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textStyle="normal" />
+		    
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            
+            android:gravity="left"
+            android:textSize="22sp"
+            android:paddingLeft="15dp"
+            
+            android:layout_below="@+id/privacy_title"
+            android:paddingRight="15dp"
+            android:text="@string/take_a_tour_msg"
+            android:textColor="@android:color/black"
+            android:textStyle="normal" />
+        
+       
+        
+        </RelativeLayout>
+        
+        </ScrollView> -->
+
+		
+    </RelativeLayout>
+

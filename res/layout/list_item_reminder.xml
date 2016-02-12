@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#0477C0"
+     >
+
+    <TextView
+        android:id="@+id/remId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView"
+          android:visibility="gone" />
+
+ <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor = "#FFF"
+        android:text="Seva60Plus"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+ <CheckBox
+     android:id="@+id/chkDone"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentTop="true"
+           android:checked="false"
+             
+            android:focusable="false"
+android:focusableInTouchMode="false"
+     android:layout_marginLeft="27dp"
+     android:layout_toRightOf="@+id/lblListItem" 
+     />
+
+</RelativeLayout>

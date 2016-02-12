@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.SplashActivity" >
+
+    <ImageView
+        android:id="@+id/iv_app_logo"
+        android:layout_width="200dp"
+        android:layout_height="191dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/splashscreenlogo3"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_tap_to_enter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_hum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_border_gray_round"
+        android:text="@string/go"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/button_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_agree_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/splash_termsandcondition_text"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:id="@+id/ll_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_terms_of_service"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#404041"
+                android:text="Terms of Sevice"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/btn_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="#02ABFE"
+                android:text="Privacy Policy"
+                android:textColor="#FFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_app_care_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_app_logo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="App that Cares"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F7931E"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tv_hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_care_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="HUM"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+</RelativeLayout>

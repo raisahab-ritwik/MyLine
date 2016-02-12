@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="city">
+        <item>Kolkata,IN</item>
+        <item>Mumbai,IN</item>
+        <item>Delhi,IN</item>
+        <item>Hydrabad,IN</item>
+        <item>Bansberia,IN</item>
+        <item>Kolaghat,IN</item>
+        <item>Jadavpur,IN</item>
+        <item>Baguihati,IN</item>
+        <item>Howrah,IN</item>
+        <item>Balurghat,IN</item>
+        <item>Athens,GR</item>
+        <item>Baku,AZ</item>
+        <item>Copenhagen,DK</item>
+        <item>Dublin,IE</item>
+        <item>Edison,US</item>
+        <item>Freetown,SL</item>
+        <item>Georgetown,GY</item>
+        <item>Helsinki,FI</item>
+        <item>Islamabad,PK</item>
+        <item>Jerusalem,IL</item>
+        <item>Kyiv,UA</item>
+        <item>London,UK</item>
+        <item>Moscow,RU</item>
+        <item>Oslo,NO</item>
+        <item>Paris,FR</item>
+        <item>Rome,IT</item>
+        <item>Seoul,KR</item>
+        <item>Tallinn,EE</item>
+        <item>Ulan Bator,MN</item>
+        <item>Vienna,AT</item>
+        <item>Warsaw,PL</item>
+        <item>Yerevan,AM</item>
+        <item>Zagreb,HR</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,542 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#0477C0" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="NEARBY"
+            android:textStyle="bold"
+            android:textColor="#023B60"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:id="@+id/all_btn_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_above="@+id/footerLay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0477C0"
+        android:scrollbars="none"
+        android:orientation="vertical">
+    
+     
+     <LinearLayout 
+        android:id="@+id/all_btn_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+    
+    <LinearLayout 
+        android:id="@+id/ll_torch_heartbeat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/atm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/big_atm"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/atm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:text="ATM"
+            android:textColor="#0477C0"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp" />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bank_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/big_bank"
+        >
+
+        
+        <TextView
+            android:id="@+id/bank_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BANK"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/big_bank"
+             />
+        
+        </RelativeLayout>
+        
+ 
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/ll_financial_advisory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/police_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/big_policestation"
+        >
+        
+        <ImageView
+            android:id="@+id/big_policestation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+        
+        
+        <TextView
+            android:id="@+id/police_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/big_policestation"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:text="POLICE"
+            android:layout_marginTop="5dp"
+            android:textColor="#0477C0"
+            android:textSize="14sp"
+             />
+        
+        </RelativeLayout>
+ <!--   
+    <RelativeLayout
+        android:id="@+id/airport_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        
+        <ImageView
+            android:id="@+id/big_airport"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/big_airport"
+             />
+        
+        
+       
+        
+        
+        <TextView
+            android:id="@+id/airport_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="AIRPORT"
+            android:layout_below="@+id/big_airport"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+             />
+        
+        </RelativeLayout>
+        
+        -->  
+        
+    <RelativeLayout
+        android:id="@+id/hospital_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/big_hospital"
+        
+        >
+        
+        <TextView
+            android:id="@+id/hospital_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/big_hospital"
+            android:paddingBottom="10dp"
+            android:text="HOSPITAL"
+            android:layout_marginTop="5dp"
+            android:textColor="#0477C0"
+            android:textSize="14sp"
+             />
+        
+        
+        
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/ll_technology"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/taxi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        
+        
+        <ImageView
+            android:id="@+id/big_taxi"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            
+            android:src="@drawable/big_taxi" />
+
+        <TextView
+            android:id="@+id/taxi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/big_taxi"
+            android:gravity="center_vertical"
+            android:text="TAXI"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        
+        <ImageView
+            android:id="@+id/big_bus"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            
+            android:src="@drawable/big_bus" />
+        
+        <TextView
+            android:id="@+id/bus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/big_bus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="BUS"
+            
+            android:textColor="#FFF"
+            android:textSize="14sp"
+             />
+        
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/hotel_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        
+        <ImageView
+            android:id="@+id/big_hotel"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            
+            android:src="@drawable/big_hotel" />
+
+        <TextView
+            android:id="@+id/hotel_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="HOTEL"
+            android:layout_below="@+id/big_hotel"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/ll_food"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+  <!--    <RelativeLayout
+        android:id="@+id/cinema_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        
+        
+        <ImageView
+            android:id="@+id/big_cinema"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/big_cinema" />
+        
+        
+        <TextView
+            android:id="@+id/cinema_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/big_cinema"
+            android:layout_centerHorizontal="true"
+            
+            android:text="CINEMA"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+             />
+        
+        </RelativeLayout>
+        
+        -->
+        
+        
+        
+        <RelativeLayout
+        android:id="@+id/resturant_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/big_resturant"
+        >
+
+        
+        
+        <TextView
+            android:id="@+id/resturant_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/big_resturant"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:text="RESTAURANT"
+            android:layout_marginTop="5dp"
+            android:textColor="#0477C0"
+            android:textSize="12sp"
+             />
+        
+        </RelativeLayout>
+        
+        
+    
+    <RelativeLayout
+        android:id="@+id/shopping_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/big_shopping"
+        android:layout_marginLeft="10dp"
+        >
+        
+       
+        
+        <TextView
+            android:id="@+id/shopping_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/big_shopping"
+            android:text="SHOPPING"
+            android:layout_marginTop="5dp"
+            android:textColor="#0477C0"
+            android:textSize="14sp"
+             />
+        
+        </RelativeLayout>
+        
+
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/ll_contact_weather"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/gas_btn1"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        android:background="@drawable/big_gas">
+        
+        <TextView
+            android:id="@+id/gas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text=""
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/gas_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:visibility="visible"
+        android:layout_weight="1"
+        >
+        
+        
+        <ImageView
+            android:id="@+id/big_gas"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/big_gas" />
+        
+        
+        <TextView
+            android:id="@+id/seva_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/big_gas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="PETROL"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+             />
+        
+        
+        </RelativeLayout>
+        
+    
+     <RelativeLayout
+        android:id="@+id/seva60_btn1"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:layout_weight="1"
+        android:background="@drawable/seva60_about">
+        
+        <TextView
+            android:id="@+id/seva_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text=""
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+   
+    </LinearLayout>
+</ScrollView>
+
+     <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>   
+</RelativeLayout>
